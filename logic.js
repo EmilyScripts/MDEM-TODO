@@ -30,10 +30,11 @@ var todoFunctions = {
       // add an id to the newTodo. You can use the generateId function to create an id.
       // hint: array.concat
     },
-    deleteTodo: function(todos, idToDelete) {
+    deleteTodo: function(todos, idToDelete=0) {
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
       // return a new array, this should not contain any todo with an id of idToDelete
       // hint: array.filter
+      return todos.filter(todo => todo.id !== idToDelete);
     },
     markTodo: function(todos, idToMark) {
       // should leave the input argument todos unchanged (you can use cloneArrayOfObjects)
