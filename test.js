@@ -68,13 +68,13 @@ test('deleteTodo test', function(t) {
 
 test('deleteTodo test', function(t) {
   var actual = todoFunctions.deleteTodo(initialTest).length;
-  var expected = initialTest.length - 1;
-  t.deepEqual(actual, expected, 'output array should be one item shorter');
+  var expected = 2;
+  t.deepEqual(actual, expected, 'array should be passed unchanged if no id given');
   t.end();
 });
 
 test('deleteTodo test', function(t) {
-  var actual = todoFunctions.deleteTodo(concatAdditional).length;
+  var actual = todoFunctions.deleteTodo(concatAdditional, 0).length;
   var expected = concatAdditional.length - 1;
   t.deepEqual(actual, expected, 'function should work with array of any length');
   t.end();
