@@ -6,7 +6,7 @@ var state = [
   { id: -3, description: 'Example uncompleted', done: false },
   { id: -2, description: 'Example completed', done: true },
   { id: -1, description: 'Add more items...', done: false },
-]; // this is our initial todoList
+]; // this is our initial todoList (TODO: move back into the function scope)
 
 
 (function() {
