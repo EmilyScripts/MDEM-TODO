@@ -20,9 +20,13 @@ var state = [
     var createTodoNode = function(todo) {
       var todoNode = document.createElement('li');
       // you will need to use addEventListener
-  
       // add span holding description
-  
+      var spanNode = document.createElement('span');
+      var span = todoNode.appendChild(spanNode);
+      var inputValue = todo.description;
+      var todoTextNode = document.createTextNode(inputValue);
+      var spanText = span.appendChild(todoTextNode);
+
       // this adds the delete button
       var deleteButtonNode = document.createElement('button');
       deleteButtonNode.addEventListener('click', function(event) {
