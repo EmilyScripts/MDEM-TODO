@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  width: calc(100vw - 2rem);
+  max-width: 37.5rem;
+  margin: 1rem auto 0 auto;
+  border: 3px solid red;
+  padding: 1rem;
+}
