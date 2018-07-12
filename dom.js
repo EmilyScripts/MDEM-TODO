@@ -1,16 +1,20 @@
 // part 2 linking it all together
 // The function here is called an iife,
 // it keeps everything inside hidden from the rest of our application
+
+var state = [
+  { id: -3, description: 'Example uncompleted', done: false },
+  { id: -2, description: 'Example completed', done: true },
+  { id: -1, description: 'Add more items...', done: false },
+]; // this is our initial todoList
+
+
 (function() {
     // This is the dom node where we will keep our todo
     var container = document.getElementById('todo-container');
     var addTodoForm = document.getElementById('add-todo');
   
-    var state = [
-      { id: -3, description: 'first todo' },
-      { id: -2, description: 'second todo' },
-      { id: -1, description: 'third todo' },
-    ]; // this is our initial todoList
+   
   
     // This function takes a todo, it returns the DOM node representing that todo
     var createTodoNode = function(todo) {
@@ -28,7 +32,7 @@
       todoNode.appendChild(deleteButtonNode);
   
       // add markTodo button
-  
+
       // add classes for css
   
       return todoNode;
@@ -40,11 +44,15 @@
         // https://developer.mozilla.org/en-US/docs/Web/Events/submit
         // what does event.preventDefault do?
         // what is inside event.target?
-  
-        var description = '?'; // event.target ....
-  
+        event.preventDefault();
+        var description = event.target.description.value;
+        var todo = {
+          id: todoFunctions.generateId(),
+          description: description,
+          done: false,
+        }
         // hint: todoFunctions.addTodo
-        var newState = []; // ?? change this!
+        var newState = todoFunctions.addTodo(state, todo);
         update(newState);
       });
     }
