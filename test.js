@@ -96,8 +96,8 @@ test('markTodo test', function(t) {
   var expected = concatAdditionalMarked;
   t.deepEqual(actual, expected, 'correct items been marked');
   t.end();
-})
 });
+
 
 test('deleteTodo test', function(t) {
   var actual = typeof todoFunctions.deleteTodo(initialTest);
