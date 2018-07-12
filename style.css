@@ -7,9 +7,125 @@
   width: calc(100vw - 2rem);
   max-width: 37.5rem;
   margin: 1rem auto 0 auto;
-  border: 3px solid red;
-  padding: 1rem;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0,0,0,0.3);
+  /* Added by Dom and Monika - centre vertically and offset from header */
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0.25rem;
 }
+
+body {
+  height: 100vh;
+  background-image: -webkit-radial-gradient(circle, #e6d5fc, #dbddf0)
+
+}
+
+h1 {
+  color: #ff8b00;
+  font-size: 4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+header {
+  position:fixed;
+  display:inline-block;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem;
+  padding-right: 0.5rem;
+/*   background-color: #a64242; */
+}
+
+/* Likely need to change this... */
+#add-todo {
+  padding: 1rem;
+  background-color:aquamarine
+  position: relative;
+  display: flex;
+}
+
+#progress-container{
+  padding-top: 1rem;
+  /* background-color:pink; */
+  margin: 0 auto;
+  width: 100%;
+}
+
+progress{
+  width: 100%;
+  border-radius: 10px;
+}
+
+progress[value]{
+  color:aliceblue;
+}
+
+progress {
+    border: 0;
+    height: 2rem;
+    border-radius: 1rem;
+}
+progress::-webkit-progress-bar {
+    border: 0;
+    height: 2rem;
+    border-radius: 1rem;
+}
+progress::-webkit-progress-value {
+    border: 0;
+    height: 2rem;
+    border-radius: 1rem;
+}
+progress::-moz-progress-bar {
+    border: 0;
+    height: 2rem;
+    border-radius: 1rem;
+}
+
+/* previously used "progress[value]" at the start but appears to be unnecessary? */
+progress::-webkit-progress-value {
+  background-image:
+	   -webkit-linear-gradient(left, #8573e0, #9172aa);
+}
+
+progress::-moz-progress-value {
+  background-image:
+	   -moz-linear-gradient(left, #8573e0, #9172aa);
+}
+
+progress::-webkit-progress-bar {
+  background-color:#dbddf0;
+}
+
+progress::-moz-progress-bar {
+  background-color:#dbddf0;
+}
+
+input[type="text"]{
+  border-radius: 1rem;
+  width:calc(100% - 4.5rem);
+  height: 2rem;
+  border: 2px solid #8573e0;
+  padding-left: 1rem;
+}
+
+input[type="submit"]{
+  width: 5.5rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 2px solid #9172aa;
+  background-color: white;
+  /* margin-right: 0.5rem; */
+  margin-left: 1rem;
+}
+
 
 #todo-container > ul {
   list-style-type: none;
