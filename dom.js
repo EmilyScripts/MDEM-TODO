@@ -115,7 +115,6 @@ var state = [
       };
 
       var doneNumber = state.filter(doneCount).length;
-      console.log("doneNumber: ", doneNumber);
 
       var calculatedProgress = Math.round((doneNumber / state.length) * 100);
 
