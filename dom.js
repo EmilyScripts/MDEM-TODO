@@ -34,10 +34,42 @@ var state = [
         update(newState);
       });
       todoNode.appendChild(deleteButtonNode);
-  
+      //adding attributes to the button
+      deleteButtonNode.setAttribute('type', 'button');
+      deleteButtonNode.setAttribute('name', 'delete item button');
+      deleteButtonNode.setAttribute('value', 'Delete');
+      
+      //adding text to button
+      
+      var deleteSpanNode = document.createElement('span');
+      var deleteSpan = deleteButtonNode.appendChild(deleteSpanNode);
+      var deleteValue = deleteButtonNode.value;
+      var deleteTextNode = document.createTextNode(deleteValue);
+      var deleteSpanText = deleteSpan.appendChild(deleteTextNode);
+      
       // add markTodo button
+      
+      var markButtonNode = document.createElement('button');
+      markButtonNode.addEventListener('click', function(event) {
+        var newState = todoFunctions.markTodo(state, todo.id);
+        update(newState);
+      });
+      todoNode.appendChild(markButtonNode);
+      //adding attributes to the button
+      markButtonNode.setAttribute('type', 'button');
+      markButtonNode.setAttribute('name', 'mark button');
+      markButtonNode.setAttribute('value', 'Mark');
 
+      //adding text to button
+      
+      var markSpanNode = document.createElement('span');
+      var markSpan = markButtonNode.appendChild(markSpanNode);
+      var markValue = markButtonNode.value;
+      var markTextNode = document.createTextNode(markValue);
+      var markSpanText = markSpan.appendChild(markTextNode);
+      
       // add classes for css
+      
   
       return todoNode;
     };
