@@ -21,11 +21,18 @@ var state = [
       var todoNode = document.createElement('li');
       // you will need to use addEventListener
       // add span holding description
-      var spanNode = document.createElement('span');
-      var span = todoNode.appendChild(spanNode);
+      var divNode = document.createElement('div');
+      var descriptionDiv = todoNode.appendChild(divNode);
       var inputValue = todo.description;
       var todoTextNode = document.createTextNode(inputValue);
-      var spanText = span.appendChild(todoTextNode);
+      var descriptionText = descriptionDiv.appendChild(todoTextNode);
+      descriptionDiv.classList.add('todo-description');
+
+      //add button container div
+
+      var buttonContainer = document.createElement('div');
+      var buttons = todoNode.appendChild(buttonContainer);
+      buttons.classList.add('todo-buttons');
 
       // this adds the delete button
       var deleteButtonNode = document.createElement('button');
@@ -33,8 +40,10 @@ var state = [
         var newState = todoFunctions.deleteTodo(state, todo.id);
         update(newState);
       });
-      todoNode.appendChild(deleteButtonNode);
+      buttons.appendChild(deleteButtonNode);
       //adding attributes to the button
+      deleteButtonNode.classList.add('item-button');
+      deleteButtonNode.classList.add('delete-button');
       deleteButtonNode.setAttribute('type', 'button');
       deleteButtonNode.setAttribute('name', 'delete item button');
       deleteButtonNode.setAttribute('value', 'Delete');
@@ -43,10 +52,10 @@ var state = [
       
       var deleteSpanNode = document.createElement('span');
       var deleteSpan = deleteButtonNode.appendChild(deleteSpanNode);
-      var deleteValue = deleteButtonNode.value;
+      var deleteValue = 'x';
       var deleteTextNode = document.createTextNode(deleteValue);
       var deleteSpanText = deleteSpan.appendChild(deleteTextNode);
-      
+
       // add markTodo button
       
       var markButtonNode = document.createElement('button');
@@ -54,8 +63,13 @@ var state = [
         var newState = todoFunctions.markTodo(state, todo.id);
         update(newState);
       });
-      todoNode.appendChild(markButtonNode);
+      buttons.appendChild(markButtonNode);
       //adding attributes to the button
+      markButtonNode.classList.add('item-button');
+      markButtonNode.classList.add('mark-button');
+      if (todo.done) {
+        markButtonNode.classList.add('mark-button--done');  
+      }
       markButtonNode.setAttribute('type', 'button');
       markButtonNode.setAttribute('name', 'mark button');
       markButtonNode.setAttribute('value', 'Mark');
@@ -64,7 +78,7 @@ var state = [
       
       var markSpanNode = document.createElement('span');
       var markSpan = markButtonNode.appendChild(markSpanNode);
-      var markValue = markButtonNode.value;
+      var markValue = String.fromCharCode(10004);
       var markTextNode = document.createTextNode(markValue);
       var markSpanText = markSpan.appendChild(markTextNode);
       
