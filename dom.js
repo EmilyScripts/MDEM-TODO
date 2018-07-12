@@ -52,7 +52,7 @@ var state = [
       
       var deleteSpanNode = document.createElement('span');
       var deleteSpan = deleteButtonNode.appendChild(deleteSpanNode);
-      var deleteValue = 'x'
+      var deleteValue = 'x';
       var deleteTextNode = document.createTextNode(deleteValue);
       var deleteSpanText = deleteSpan.appendChild(deleteTextNode);
 
@@ -76,11 +76,11 @@ var state = [
 
       //adding text to button
       
-      // var markSpanNode = document.createElement('span');
-      // var markSpan = markButtonNode.appendChild(markSpanNode);
-      // var markValue = markButtonNode.value;
-      // var markTextNode = document.createTextNode(markValue);
-      // var markSpanText = markSpan.appendChild(markTextNode);
+      var markSpanNode = document.createElement('span');
+      var markSpan = markButtonNode.appendChild(markSpanNode);
+      var markValue = String.fromCharCode(10004);
+      var markTextNode = document.createTextNode(markValue);
+      var markSpanText = markSpan.appendChild(markTextNode);
       
       // add classes for css
       
