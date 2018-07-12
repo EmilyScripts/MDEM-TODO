@@ -109,6 +109,26 @@ var state = [
   
       // you may want to add a class for css
       container.replaceChild(todoListNode, container.firstChild);
+
+      var doneCount = function(x){
+        return x.done == true;
+      };
+
+      var doneNumber = state.filter(doneCount).length;
+
+      var calculatedProgress = Math.round((doneNumber / state.length) * 100);
+
+      var progressElement = document.createElement("progress");
+      progressElement.setAttribute("max", 100);
+      progressElement.setAttribute("value", calculatedProgress);
+
+      var progressContainer = document.getElementById("progress-container");
+
+      progressContainer.replaceChild(progressElement, progressContainer.firstChild);
+
+      // container.parentNode.insertBefore(progressElement, container.nextSibling);
+      
+
     };
   
     if (container) renderState(state);
