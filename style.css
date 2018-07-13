@@ -115,6 +115,8 @@ input[type="text"]{
   height: 2rem;
   border: 2px solid #8573e0;
   padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
 }
 
 input[type="submit"]{
@@ -125,6 +127,7 @@ input[type="submit"]{
   background-color: white;
   /* margin-right: 0.5rem; */
   margin-left: 1rem;
+  font-size: 1rem;
 }
 
 
