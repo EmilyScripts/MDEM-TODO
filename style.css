@@ -84,11 +84,14 @@ progress::-webkit-progress-value {
     border: 0;
     height: 2rem;
     border-radius: 1rem;
+    background-image: linear-gradient(left, #8573e0, #9172aa);
 }
 progress::-moz-progress-bar {
     border: 0;
     height: 2rem;
     border-radius: 1rem;
+    background-image: -moz-linear-gradient(left, #8573e0, #9172aa);
+    background-image: linear-gradient(left, #8573e0, #9172aa);
 }
 
 /* previously used "progress[value]" at the start but appears to be unnecessary? */
