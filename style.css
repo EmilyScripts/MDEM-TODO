@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 #wrapper {
@@ -83,11 +84,14 @@ progress::-webkit-progress-value {
     border: 0;
     height: 2rem;
     border-radius: 1rem;
+    background-image: linear-gradient(left, #8573e0, #9172aa);
 }
 progress::-moz-progress-bar {
     border: 0;
     height: 2rem;
     border-radius: 1rem;
+    background-image: -moz-linear-gradient(left, #8573e0, #9172aa);
+    background-image: linear-gradient(left, #8573e0, #9172aa);
 }
 
 /* previously used "progress[value]" at the start but appears to be unnecessary? */
@@ -115,6 +119,8 @@ input[type="text"]{
   height: 2rem;
   border: 2px solid #8573e0;
   padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
 }
 
 input[type="submit"]{
@@ -125,6 +131,7 @@ input[type="submit"]{
   background-color: white;
   /* margin-right: 0.5rem; */
   margin-left: 1rem;
+  font-size: 1rem;
 }
 
 
@@ -156,7 +163,8 @@ input[type="submit"]{
 }
 
 #todo-container > ul > li:nth-child(4n-1) {
-  background: #dea59b;
+  /* background: #dea59b; */
+  background: #c7948b
 }
 
 #todo-container > ul > li:nth-child(4n) {
@@ -170,6 +178,7 @@ input[type="submit"]{
   /* border: 3px solid yellow; */
   position: relative;
   top: 0;
+  overflow: hidden;
 }
 
 .todo-buttons {
@@ -210,3 +219,13 @@ input[type="submit"]{
   background: rgba(255,255,255,0.4);
 }
 
+/* A11Y */
+
+.visually-hidden { 
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
