@@ -13,7 +13,7 @@
   box-shadow: 0.5rem 0.5rem 2rem rgba(0,0,0,0.3);
   /* Added by Dom and Monika - centre vertically and offset from header */
   position: absolute;
-  top: 8rem;
+  top: 10rem;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 0.25rem;
@@ -27,22 +27,35 @@ body {
 }
 
 h1 {
-  color: #ff8b00;
+  color: #fea83b;
   font-size: 4rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+  display: inline-flex;
+}
+
+img {
+  display: inline-flex;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  max-height: 6rem;
+  max-width: 6rem;
 }
 
 header {
   position:fixed;
-  display:inline-block;
+  display:flex;
+  align-items: center;
+  flex-direction: row-reverse;
   top: 2rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 0.5rem;
   padding-right: 0.5rem;
+  /* z-index: 1; */
 /*   background-color: #a64242; */
 }
 
@@ -52,6 +65,7 @@ header {
   background-color:aquamarine
   position: relative;
   display: flex;
+  
 }
 
 #progress-container{
@@ -217,6 +231,30 @@ input[type="submit"]{
 
 .mark-button--done {
   background: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 600px) {
+
+h1 {
+  font-size: 2rem;
+}
+
+img {
+  max-width: 4rem;
+  max-height: 4rem;
+}
+
+header {
+  top: 0;
+}
+
+#wrapper {
+  top: 5rem;
+  padding: 1rem;
+}
+
+#todo-container > ul > li {
+  padding: 0.5rem;
 }
 
 /* A11Y */
