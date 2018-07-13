@@ -69,6 +69,7 @@ var state = [
       markButtonNode.classList.add('mark-button');
       if (todo.done) {
         markButtonNode.classList.add('mark-button--done');  
+        todoNode.classList.add('item-done')
       }
       markButtonNode.setAttribute('type', 'button');
       markButtonNode.setAttribute('name', 'mark button');
