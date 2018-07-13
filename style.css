@@ -45,6 +45,10 @@ img {
   max-width: 6rem;
 }
 
+#disappear {
+  display: none;
+}
+
 header {
   position:fixed;
   display:flex;
@@ -62,7 +66,7 @@ header {
 /* Likely need to change this... */
 #add-todo {
   padding: 1rem;
-  background-color:aquamarine
+  /* background-color:aquamarine; */
   position: relative;
   display: flex;
   

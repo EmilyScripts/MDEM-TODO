@@ -141,9 +141,21 @@ var state = [
       progressContainer.replaceChild(progressElement, progressContainer.firstChild);
 
       // container.parentNode.insertBefore(progressElement, container.nextSibling);
+
+      //Mon animation:
+      var dodo = document.getElementsByTagName("IMG")[0];
+      var tutu = document.getElementsByTagName("IMG")[1];
+      if (progressElement.value === 100) {
+        dodo.setAttribute("id", "disappear");
+        tutu.removeAttribute("id", "disappear");
+        }  else {
+          tutu.setAttribute("id", "disappear");
+          dodo.removeAttribute("id", "disappear");
+        }
+      }
       
 
-    };
+    
   
     if (container) renderState(state);
   })();
