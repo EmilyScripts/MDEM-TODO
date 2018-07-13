@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
 }
 
 #wrapper {
@@ -159,7 +160,8 @@ input[type="submit"]{
 }
 
 #todo-container > ul > li:nth-child(4n-1) {
-  background: #dea59b;
+  /* background: #dea59b; */
+  background: #c7948b
 }
 
 #todo-container > ul > li:nth-child(4n) {
@@ -173,6 +175,7 @@ input[type="submit"]{
   /* border: 3px solid yellow; */
   position: relative;
   top: 0;
+  overflow: hidden;
 }
 
 .todo-buttons {
